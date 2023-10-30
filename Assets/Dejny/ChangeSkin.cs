@@ -1,18 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeSkin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<Sprite> images; // Seznam obrázk?
+    [SerializeField] private string skinName; // Název skinu pro uložení do editoru
+    private SpriteRenderer targetObject; // Cílový objekt, na kterém chceme mìnit obrázek
+    private int currentImageIndex = 0; // Index aktuálního obrázku
+
+    private void Awake()
     {
-        
+        // Získáme SpriteRenderer ze stejného objektu, ke kterému je tento skript p?ipojen
+        targetObject = GetComponent<SpriteRenderer>();
+
+        // Pokud existuje uložený skin pro tento objekt, zobrazíme ho
+        if (PlayerPrefs.HasKey(skinName))
+        {
+            int savedIndex = PlayerPrefs.GetInt(skinName);
+            if (savedIndex >= 0 && savedIndex < images.Count)
+            {
+                currentImageIndex = savedIndex;
+                targetObject.sprite = images[currentImageIndex];
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    // Metoda pro zm?nu obrázku
+    public void Change(bool forward)
     {
-        
+        if (forward)
+        {
+            currentImageIndex++;
+            if (currentImageIndex >= images.Count)
+            {
+                currentImageIndex = 0;
+            }
+        }
+        else
+        {
+            currentImageIndex--;
+            if (currentImageIndex < 0)
+            {
+                currentImageIndex = images.Count - 1;
+            }
+        }
+
+        targetObject.sprite = images[currentImageIndex];
+        PlayerPrefs.SetInt(skinName, currentImageIndex);
     }
 }
