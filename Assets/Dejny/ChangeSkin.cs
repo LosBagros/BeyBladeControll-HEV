@@ -1,21 +1,21 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ChangeSkin : MonoBehaviour
 {
-    [SerializeField] private List<Sprite> images; // Seznam obr·zk?
-    [SerializeField] private string skinName; // N·zev skinu pro uloûenÌ do editoru
-    private SpriteRenderer targetObject; // CÌlov˝ objekt, na kterÈm chceme mÏnit obr·zek
-    private int currentImageIndex = 0; // Index aktu·lnÌho obr·zku
+    [SerializeField] private List<Sprite> images; // Seznam obr√°zk≈Ø
+    [SerializeField] private string skinName; // N√°zev skinu pro ulo≈æen√≠ do editoru
+    private SpriteRenderer targetObject; // C√≠lov√Ω objekt, na kter√©m chceme m√¨nit obr√°zek
+    private int currentImageIndex = 0; // Index aktu√°ln√≠ho obr√°zku
 
     private void Awake()
     {
-        // ZÌsk·me SpriteRenderer ze stejnÈho objektu, ke kterÈmu je tento skript p?ipojen
+        // Z√≠sk√°me SpriteRenderer ze stejn√©ho objektu, ke kter√©mu je tento skript p≈ôipojen
         targetObject = GetComponent<SpriteRenderer>();
 
-        // Pokud existuje uloûen˝ skin pro tento objekt, zobrazÌme ho
+        // Pokud existuje ulo≈æen√Ω skin pro tento objekt, zobraz√≠me ho
         if (PlayerPrefs.HasKey(skinName))
         {
             int savedIndex = PlayerPrefs.GetInt(skinName);
@@ -27,7 +27,7 @@ public class ChangeSkin : MonoBehaviour
         }
     }
 
-    // Metoda pro zm?nu obr·zku
+    // Metoda pro zmƒõnu obr√°zku
     public void Change(bool forward)
     {
         if (forward)
