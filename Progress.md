@@ -47,9 +47,7 @@ Je hotový základní návrh mapy a kotoučů, začali se dělat další modely 
 | [PetrVorlos35](https://github.com/PetrVorlos35)       | animace a pohyb kamery, rozvržení menu |
 | [JakubGrezl](https://github.com/JakubGrezl)           | animace a pohyb kamery, rozvržení menu |
 | [Dejnyyy](https://github.com/Dejnyyy)                 | ❌ |
-| [Mono777777](https://github
-
-.com/Mono777777)           | screenshoty součástek beybladů |
+| [Mono777777](https://github.com/Mono777777)           | screenshoty součástek beybladů |
 | [creeperplayer20](https://github.com/creeperplayer20) | zvukování |
 | [brynys](https://github.com/brynys)                   | předání plánu menu, předělání mechanik kotoučů |
 | [Bagros](https://github.com/LosBagros)                | řešení problémů s Gitem, vizuální efekty a předání parametrů mezi dev1 a dev2 |
