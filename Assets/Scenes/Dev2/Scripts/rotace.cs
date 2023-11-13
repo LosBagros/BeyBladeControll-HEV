@@ -5,7 +5,7 @@ using UnityEngine;
 public class rotace : MonoBehaviour
 {
     [SerializeField]
-    int zivoty;
+    float zivoty;
     [SerializeField]
     int sila;
     [SerializeField]

@@ -32,15 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Pohyb vpøed a vzad
-        float move = inputVertical * Speed * Time.deltaTime;
+        // Pohyb vpøed, vzad a stranami
+        Vector3 move = new Vector3(inputHorizontal, 0, inputVertical) * Speed * Time.deltaTime;
 
-        // Otáèení
-        float turn = inputHorizontal * TurnSpeed * Time.deltaTime;
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-
-        // Aplikace pohybu a otáèení
-        rb.MovePosition(rb.position + transform.forward * move);
-        rb.MoveRotation(rb.rotation * turnRotation);
+        // Aplikace pohybu
+        rb.MovePosition(rb.position + move);
     }
 }
