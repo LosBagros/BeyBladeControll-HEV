@@ -31,7 +31,7 @@ Upřesnili jsme si práci, některým se povedlo na projektu začít pracovat.
 | [brynys](https://github.com/brynys)                   | ❌ |
 | [Bagros](https://github.com/LosBagros)                | dostal za úkol team management, protože JJ nepřišel a ještě není co spojovat, snaha o donucení týmu vzájemně spolupracovat a dělat zadané tasky |
 
-## 2. Den Dec 13, 2023
+## 2. Den Nov 13, 2023
 
 Všichni už mají správnou verzi Unity a rozdělila se práce podle návrhu.
 
