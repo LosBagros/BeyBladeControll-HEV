@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class PohybDoStredu : MonoBehaviour
 {
-    public Vector3 cilovaPozice; // Urèení cílové pozice
-
-    public float rychlost = 5f; // Základní rychlost pohybu hráèe
-    public float silaFaktor = 2f; // Faktor síly v závislosti na vzdálenosti
+    [SerializeField]
+    private Vector3 cilovaPozice; // Urèení cílové pozice
+    
+    [SerializeField]
+    private float rychlost = 5f; // Základní rychlost pohybu hráèe
+    
+    [SerializeField]
+    private float silaFaktor = 2f; // Faktor síly v závislosti na vzdálenosti
 
     void Update()
     {
