@@ -51,3 +51,24 @@ Je hotový základní návrh mapy a kotoučů, začali se dělat další modely 
 | [creeperplayer20](https://github.com/creeperplayer20) | zvukování |
 | [brynys](https://github.com/brynys)                   | předání plánu menu, předělání mechanik kotoučů |
 | [Bagros](https://github.com/LosBagros)                | řešení problémů s Gitem, vizuální efekty a předání parametrů mezi dev1 a dev2 |
+
+## 3. Den Dec 27, 2023
+
+vytvoření základního návrhu menu, vylepšování pohybu, dodělání modelů kotoučů, návrky poro použití audia.
+
+Tuto hodinu jsme se hlavě zaměřili na to aby byla práce správně rozložená a každý věděl co má dělat
+
+## Dnešní progress
+| Člen týmu | Práce | 
+| --- | --- |
+| [LookupCz](https://github.com/LookupCz)               | dokončení modelování všech kotoučů |
+| [MatejUllman](https://github.com/MatejUllman)         | oprava bugů pohybu |
+| [FilipHlavka](https://github.com/FilipHlavka)         | vylepšování a navrhování pohybu |
+| [lagemaxl](https://github.com/lagemaxl)               | vylepšování a navrhování pohybu |
+| [PetrVorlos35](https://github.com/PetrVorlos35)       | návrh menu a jeho graf. zpracování |
+| [JakubGrezl](https://github.com/JakubGrezl)           | návrh menu a jeho graf. zpracování |
+| [Dejnyyy](https://github.com/Dejnyyy)                 | testování hry a navrhování dalších map |
+| [Mono777777](https://github.com/Mono777777)           | hledání hudebního doprovodu hry |
+| [creeperplayer20](https://github.com/creeperplayer20) | rozvržení zvuku ve hře |
+| [brynys](https://github.com/brynys)                   | práce na zlepšení kooperace týmu a zlepšení informovanosti |
+| [Bagros](https://github.com/LosBagros)                | kontrola Gitu, pomoc na kooperaci podtýmů |
