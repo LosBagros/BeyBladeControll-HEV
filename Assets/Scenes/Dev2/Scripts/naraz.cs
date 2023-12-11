@@ -22,9 +22,9 @@ public class naraz : MonoBehaviour
                 float mySpeed = Vector3.Dot(rb.velocity, collisionDirection);
                 float otherSpeed = Vector3.Dot(otherRb.velocity, collisionDirection);
 
-                if (mySpeed > otherSpeed)
+                if (mySpeed >= otherSpeed)
                 {
-                    Vector3 forceDirection = (collisionDirection * (mySpeed - otherSpeed))*100;
+                    Vector3 forceDirection = collisionDirection * 100;//(collisionDirection * (mySpeed - otherSpeed))*100;
                     otherRb.AddForce(forceDirection , ForceMode.Impulse);
                     
                 }
