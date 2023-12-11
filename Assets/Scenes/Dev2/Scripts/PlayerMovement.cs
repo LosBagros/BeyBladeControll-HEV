@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        boost.boostEvent.AddListener(prvniZmena);
+      
     }
 
     private void Update()
@@ -35,22 +35,10 @@ public class PlayerMovement : MonoBehaviour
     {
         
         // Pohyb vpøed, vzad a stranami
-        Vector3 move = new Vector3(inputHorizontal, 0, inputVertical) * Speed * boostSpeed * Time.deltaTime;
+        Vector3 move = new Vector3(inputHorizontal, 0, inputVertical) * Speed * Time.deltaTime;
 
         // Aplikace pohybu
         rb.MovePosition(rb.position + move);
     }
-    void prvniZmena(GameObject go)
-    {
-        if(go == gameObject)
-        {
-            boostSpeed = 2;
-            StartCoroutine(Zmena());
-        }
-    }
-    private IEnumerator Zmena()
-    {
-        boostSpeed = 0;
-        yield return new WaitForSeconds(3f);
-    }
+   
 }
