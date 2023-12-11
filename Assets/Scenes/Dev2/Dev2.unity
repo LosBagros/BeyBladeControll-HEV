@@ -493,12 +493,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 477044380}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 968473366}
   m_SourcePrefab: {fileID: 100100000, guid: 870c0277032a89646a6a3972196586c9, type: 3}
 --- !u!4 &968473365 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 870c0277032a89646a6a3972196586c9, type: 3}
   m_PrefabInstance: {fileID: 968473364}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &968473366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477044373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d64d6b024a426742ae048eebef9c0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cilovaPozice: {x: 0, y: 0, z: 0}
+  rychlost: 5
+  silaFaktor: 1.5
 --- !u!4 &971296742 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7876023681238672744, guid: 870c0277032a89646a6a3972196586c9, type: 3}
@@ -687,12 +705,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1093412256}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1271451130}
   m_SourcePrefab: {fileID: 100100000, guid: 870c0277032a89646a6a3972196586c9, type: 3}
 --- !u!4 &1271451129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 870c0277032a89646a6a3972196586c9, type: 3}
   m_PrefabInstance: {fileID: 1271451128}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1271451130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093412250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d64d6b024a426742ae048eebef9c0f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cilovaPozice: {x: 0, y: 0, z: 0}
+  rychlost: 5
+  silaFaktor: 1.5
 --- !u!1 &1375779267
 GameObject:
   m_ObjectHideFlags: 0
