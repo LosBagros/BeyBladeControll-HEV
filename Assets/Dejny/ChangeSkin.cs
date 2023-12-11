@@ -5,24 +5,24 @@ using UnityEngine.UI;
 
 public class ChangeSkin : MonoBehaviour
 {
-    [SerializeField] private List<Sprite> images; // Seznam obrázků
+    [SerializeField] private List<GameObject> Modely; // Seznam obrázků
     [SerializeField] private string skinName; // Název skinu pro uložení do editoru
-    private SpriteRenderer targetObject; // Cílový objekt, na kterém chceme mìnit obrázek
+    private GameObject targetObject; // Cílový objekt, na kterém chceme mìnit obrázek
     private int currentImageIndex = 0; // Index aktuálního obrázku
 
     private void Awake()
     {
         // Získáme SpriteRenderer ze stejného objektu, ke kterému je tento skript připojen
-        targetObject = GetComponent<SpriteRenderer>();
+        targetObject = GetComponent<GameObject>();
 
         // Pokud existuje uložený skin pro tento objekt, zobrazíme ho
         if (PlayerPrefs.HasKey(skinName))
         {
             int savedIndex = PlayerPrefs.GetInt(skinName);
-            if (savedIndex >= 0 && savedIndex < images.Count)
+            if (savedIndex >= 0 && savedIndex < Modely.Count)
             {
                 currentImageIndex = savedIndex;
-                targetObject.sprite = images[currentImageIndex];
+                targetObject = Modely[currentImageIndex];
             }
         }
     }
@@ -33,7 +33,7 @@ public class ChangeSkin : MonoBehaviour
         if (forward)
         {
             currentImageIndex++;
-            if (currentImageIndex >= images.Count)
+            if (currentImageIndex >= Modely.Count)
             {
                 currentImageIndex = 0;
             }
@@ -43,11 +43,11 @@ public class ChangeSkin : MonoBehaviour
             currentImageIndex--;
             if (currentImageIndex < 0)
             {
-                currentImageIndex = images.Count - 1;
+                currentImageIndex = Modely.Count - 1;
             }
         }
 
-        targetObject.sprite = images[currentImageIndex];
+        targetObject = Modely[currentImageIndex];
         PlayerPrefs.SetInt(skinName, currentImageIndex);
     }
 }
