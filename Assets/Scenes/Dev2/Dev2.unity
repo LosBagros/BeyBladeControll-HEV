@@ -514,7 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64d6b024a426742ae048eebef9c0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilovaPozice: {x: 0, y: 0, z: 0}
+  cilovaPozice: {x: 0, y: 0.2, z: 0}
   rychlost: 5
   silaFaktor: 1.5
 --- !u!4 &971296742 stripped
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d64d6b024a426742ae048eebef9c0f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cilovaPozice: {x: 0, y: 0, z: 0}
+  cilovaPozice: {x: 0, y: 0.2, z: 0}
   rychlost: 5
   silaFaktor: 1.5
 --- !u!1 &1375779267

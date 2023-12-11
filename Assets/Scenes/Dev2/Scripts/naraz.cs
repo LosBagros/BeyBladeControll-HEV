@@ -24,7 +24,7 @@ public class naraz : MonoBehaviour
 
                 if (mySpeed >= otherSpeed)
                 {
-                    Vector3 forceDirection = collisionDirection * 100;//(collisionDirection * (mySpeed - otherSpeed))*100;
+                    Vector3 forceDirection = collisionDirection * 30;//(collisionDirection * (mySpeed - otherSpeed))*100;
                     otherRb.AddForce(forceDirection , ForceMode.Impulse);
                     
                 }
