@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48c938b94cfebe4db9d8df9d93094e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hits: []
 --- !u!114 &477044383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,6 +744,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a48c938b94cfebe4db9d8df9d93094e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hits:
+  - {fileID: 8300000, guid: cb08a9e6d7682984ea99cb6b1bba37bb, type: 3}
+  - {fileID: 8300000, guid: ccee1f6e8088b884aabdd6a3a9e4bd9c, type: 3}
+  - {fileID: 8300000, guid: e6e92817818bfec469ba6945d3d6b8fc, type: 3}
+  - {fileID: 8300000, guid: 339d4a24dd6bc2641b2ebc7d3ef20145, type: 3}
+  - {fileID: 8300000, guid: 0e2c497a8d8b5eb44a93df6eb84dc26d, type: 3}
+  - {fileID: 8300000, guid: c0e38d2249f23894b8792df1326373c4, type: 3}
+  - {fileID: 8300000, guid: 3aa68018402d37f4397fd449432f2011, type: 3}
 --- !u!114 &1093412259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,6 +766,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallenName: "\u010Cervenej"
   text: {fileID: 1658448740}
+--- !u!82 &1093412260
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1093412250}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cb08a9e6d7682984ea99cb6b1bba37bb, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1227496053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5650406446701371949, guid: 870c0277032a89646a6a3972196586c9, type: 3}
@@ -855,6 +960,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1093412259}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 870c0277032a89646a6a3972196586c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1093412260}
   m_SourcePrefab: {fileID: 100100000, guid: 870c0277032a89646a6a3972196586c9, type: 3}
 --- !u!1 &1375779267
 GameObject:
@@ -1249,7 +1357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

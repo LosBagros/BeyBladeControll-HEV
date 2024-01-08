@@ -7,9 +7,15 @@ public class naraz : MonoBehaviour
 {
     int zivoty;
     Rigidbody rb;
+
+    [SerializeField]
+    private AudioClip[] hits;
+    private AudioSource audio;
+
     void Start()
     {
          rb = gameObject.GetComponent<Rigidbody>();
+         audio = gameObject.GetComponent<AudioSource>(); 
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -29,6 +35,9 @@ public class naraz : MonoBehaviour
                     
                 }
             }
+            audio.clip = hits[Random.Range(0, hits.Length)];
+            audio.Play();
+
         }
     }
     // Update is called once per frame
