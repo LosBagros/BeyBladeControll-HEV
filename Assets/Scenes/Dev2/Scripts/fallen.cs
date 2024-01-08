@@ -22,7 +22,7 @@ public class fallen : MonoBehaviour
     {
         if (transform.position.y < -1)
         {
-            text.text = fallenName + " vyhrál";
+            text.text = fallenName + " vyhral";
             text.enabled = true;
         }
     }
