@@ -11,6 +11,7 @@ public class SkinManager : MonoBehaviour
     {
         // Initially, set the first skin as active
         SetActiveSkin(currentSkinIndex);
+        ZmenSkin();
     }
 
     public void ChangeSkin()
@@ -32,5 +33,9 @@ public class SkinManager : MonoBehaviour
         {
             skins[index].SetActive(active);
         }
+    }
+    public void ZmenSkin()
+    {
+        currentSkinIndex = (currentSkinIndex + 1) % skins.Length;
     }
 }
