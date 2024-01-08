@@ -12,11 +12,17 @@ public class fallen : MonoBehaviour
     [SerializeField]
     private TMP_Text text;
 
+    private void Start()
+    {
+        text.enabled = false;
+
+    }
+
     private void Update()
     {
         if (transform.position.y < -1)
         {
-            text.text = fallenName + " has fallen";
+            text.text = fallenName + " vyhrál";
             text.enabled = true;
         }
     }
