@@ -28,6 +28,9 @@ public class rotace : MonoBehaviour
         Toc(bodyTransform, false);
         Toc(legTransform, true);
         Toc(headTransform, true);
+
+
+
     }
     private void Toc(Transform tf,bool pravo)
     {
