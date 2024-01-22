@@ -396,6 +396,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0e2c497a8d8b5eb44a93df6eb84dc26d, type: 3}
   - {fileID: 8300000, guid: c0e38d2249f23894b8792df1326373c4, type: 3}
   - {fileID: 8300000, guid: 3aa68018402d37f4397fd449432f2011, type: 3}
+  collisionForce: 700
 --- !u!82 &300784313
 AudioSource:
   m_ObjectHideFlags: 0
@@ -504,10 +505,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff15e61d3de7af54c8746f3f273dbf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
-  TurnSpeed: 180
-  InputNameHorizontal: H1
-  InputNameVertical: V1
+  speed: 1
+  forceMultiplier: 12
+  inputNameHorizontal: H1
+  inputNameVertical: V1
 --- !u!114 &300784315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,10 +612,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff15e61d3de7af54c8746f3f273dbf43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
-  TurnSpeed: 180
-  InputNameHorizontal: H2
-  InputNameVertical: V2
+  speed: 1
+  forceMultiplier: 12
+  inputNameHorizontal: H2
+  inputNameVertical: V2
 --- !u!114 &729418313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hits: []
+  collisionForce: 700
 --- !u!1001 &802924925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -669,11 +671,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b1a88c223262739408ac2d12baa25fa8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1a88c223262739408ac2d12baa25fa8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b1a88c223262739408ac2d12baa25fa8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1414,14 +1416,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2139310705}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33484828, y: -0, z: -0, w: 0.94227207}
-  m_LocalPosition: {x: 0, y: 8, z: -12}
+  m_LocalRotation: {x: 0.37864852, y: 0, z: 0, w: 0.92554057}
+  m_LocalPosition: {x: 0, y: 9, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1537365189}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 39.127, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 44.5, y: 0, z: 0}
 --- !u!114 &2139310709
 MonoBehaviour:
   m_ObjectHideFlags: 0

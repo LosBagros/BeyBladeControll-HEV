@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float Speed;
-    [SerializeField] private float TurnSpeed = 180f;
-    [SerializeField] private string InputNameHorizontal;
-    [SerializeField] private string InputNameVertical;
+    [SerializeField] private float speed;
+    [SerializeField] private float forceMultiplier = 10f;
+    [SerializeField] private string inputNameHorizontal;
+    [SerializeField] private string inputNameVertical;
 
     private Rigidbody rb;
-    private float inputHorizontal;
-    private float inputVertical;
+    private Vector3 inputVector;
 
     private void Start()
     {
@@ -21,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        inputHorizontal = Input.GetAxis(InputNameHorizontal);
-        inputVertical = Input.GetAxis(InputNameVertical);
+        float inputHorizontal = Input.GetAxis(inputNameHorizontal);
+        float inputVertical = Input.GetAxis(inputNameVertical);
+
+        inputVector = new Vector3(inputHorizontal, 0, inputVertical).normalized;
     }
 
     private void FixedUpdate()
@@ -32,10 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Pohyb vp�ed, vzad a stranami
-        Vector3 move = new Vector3(inputHorizontal, 0, inputVertical) * Speed * Time.deltaTime;
-
-        // Aplikace pohybu
-        rb.MovePosition(rb.position + move);
+        Vector3 force = inputVector * speed * forceMultiplier * Time.fixedDeltaTime;
+        rb.AddForce(force, ForceMode.VelocityChange);
     }
 }

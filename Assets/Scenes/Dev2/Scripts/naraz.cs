@@ -13,8 +13,9 @@ public class naraz : MonoBehaviour
 
     private new AudioSource audio;
 
-    private float cooldown = 1f;
-    private float colldownTime = 1f;
+    [SerializeField]
+    private float collisionForce = 300f;
+
 
     void Start()
     {
@@ -23,9 +24,8 @@ public class naraz : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") && cooldown >= colldownTime)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            cooldown = 0f;
             Rigidbody otherRb = collision.gameObject.GetComponent<Rigidbody>();
             if (otherRb != null)
             {
@@ -33,10 +33,9 @@ public class naraz : MonoBehaviour
                 float mySpeed = Vector3.Dot(rb.velocity, collisionDirection);
                 float otherSpeed = Vector3.Dot(otherRb.velocity, collisionDirection);
 
-
                 if (mySpeed >= otherSpeed)
                 {
-                    Vector3 forceDirection = collisionDirection * 300;
+                    Vector3 forceDirection = collisionDirection * collisionForce;
                     otherRb.AddForce(forceDirection, ForceMode.Impulse);
                 }
             }
@@ -51,10 +50,5 @@ public class naraz : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cooldown <= colldownTime)
-        {
-            cooldown += Time.deltaTime;
-            Debug.Log(cooldown);
-        }
     }
 }
