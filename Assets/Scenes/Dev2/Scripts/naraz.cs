@@ -10,17 +10,22 @@ public class naraz : MonoBehaviour
 
     [SerializeField]
     private AudioClip[] hits;
-    private AudioSource audio;
+
+    private new AudioSource audio;
+
+    private float cooldown = 1f;
+    private float colldownTime = 1f;
 
     void Start()
     {
-         rb = gameObject.GetComponent<Rigidbody>();
-         audio = gameObject.GetComponent<AudioSource>(); 
+        rb = gameObject.GetComponent<Rigidbody>();
+        audio = gameObject.GetComponent<AudioSource>();
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") && cooldown >= colldownTime)
         {
+            cooldown = 0f;
             Rigidbody otherRb = collision.gameObject.GetComponent<Rigidbody>();
             if (otherRb != null)
             {
@@ -28,21 +33,28 @@ public class naraz : MonoBehaviour
                 float mySpeed = Vector3.Dot(rb.velocity, collisionDirection);
                 float otherSpeed = Vector3.Dot(otherRb.velocity, collisionDirection);
 
+
                 if (mySpeed >= otherSpeed)
                 {
-                    Vector3 forceDirection = collisionDirection * 300; //(collisionDirection * (mySpeed - otherSpeed))*100;
-                    otherRb.AddForce(forceDirection , ForceMode.Impulse);
-                    
+                    Vector3 forceDirection = collisionDirection * 300;
+                    otherRb.AddForce(forceDirection, ForceMode.Impulse);
                 }
             }
-            audio.clip = hits[Random.Range(0, hits.Length)];
-            audio.Play();
+            if (hits.Length > 0)
+            {
+                audio.clip = hits[Random.Range(0, hits.Length - 1)];
+                audio.Play();
+            }
 
         }
     }
     // Update is called once per frame
     void Update()
     {
-        
+        if (cooldown <= colldownTime)
+        {
+            cooldown += Time.deltaTime;
+            Debug.Log(cooldown);
+        }
     }
 }

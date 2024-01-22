@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
-        // Pohyb vpøed, vzad a stranami
+        // Pohyb vpï¿½ed, vzad a stranami
         Vector3 move = new Vector3(inputHorizontal, 0, inputVertical) * Speed * Time.deltaTime;
 
         // Aplikace pohybu

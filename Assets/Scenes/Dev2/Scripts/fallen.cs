@@ -21,7 +21,7 @@ public class fallen : MonoBehaviour
     {
         if (transform.position.y < -1)
         {
-            text.text = fallenName + " vyhral";
+            text.text = fallenName + " won!";
             text.enabled = true;
         }
     }

@@ -5,6 +5,10 @@ public class Music : MonoBehaviour
     [SerializeField]
     private AudioClip musicClip;
 
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float volume = 0.5f;
+
     private AudioSource musicSource;
 
     void Awake()
@@ -26,6 +30,7 @@ public class Music : MonoBehaviour
 
             musicSource.clip = musicClip;
             musicSource.loop = true;
+            musicSource.volume = volume; // Set the volume
             musicSource.Play();
         }
     }
